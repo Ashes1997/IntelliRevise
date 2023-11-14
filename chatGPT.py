@@ -1,10 +1,16 @@
 import openai
 import os
 from openai import OpenAI
+from key import openai_api_key
 
 
-client = OpenAI()
+#need to reimplent openai API key
+
+
+
+client = OpenAI(api_key=openai_api_key)
 def flash_create(prompt: str):
+  print("Creating flashcard...")
 
   
   completion = client.chat.completions.create(
@@ -34,3 +40,7 @@ def flash_create(prompt: str):
   
   return flashcard
 
+flashcard = flash_create("Second normal form involves removing partial dependencies from the relations")
+
+for f in flashcard:
+  print(f)

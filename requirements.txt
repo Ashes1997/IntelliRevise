@@ -1,0 +1,4 @@
+openai
+flask
+flask-login
+flask-SQLAlchemy

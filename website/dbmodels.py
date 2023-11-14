@@ -3,7 +3,7 @@ from flask_login import UserMixin
 from sqlalchemy.sql import func
 from werkzeug.security import generate_password_hash, check_password_hash
 
-class User(UserMixin,db.Model):
+class User(UserMixin,db.Model): #usermixin provides methods for flask login
   id = db.Column(db.Integer, primary_key=True)
   email = db.Column(db.String(1000000000), unique=True, nullable=False)
   password = db.Column(db.String(1000000000), nullable=False)
