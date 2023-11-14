@@ -11,7 +11,8 @@ def home():
 
 @views.route('/try-it-out')
 def try_it_out():
-  return render_template("try_it_out.html")
+  return render_template("try_it_out.html", user=current_user)
+
 
   
 
