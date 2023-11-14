@@ -40,7 +40,5 @@ def flash_create(prompt: str):
   
   return flashcard
 
-flashcard = flash_create("Second normal form involves removing partial dependencies from the relations")
 
-for f in flashcard:
-  print(f)
+
