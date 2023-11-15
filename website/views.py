@@ -29,7 +29,7 @@ def try_it_out():
       question = flashcard[0]
       answers = [(flashcard[1],True), (flashcard[2], False), (flashcard[3], False), (flashcard[4], False)]
       random.shuffle(answers)
-      return render_template("try_it_out.html", user=current_user, question=question, answers=shuffled_answers)
+      return render_template("try_it_out.html", user=current_user, question=question, answers=answers)
     
   
   
