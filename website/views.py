@@ -28,7 +28,7 @@ def try_it_out():
         #index 4 is incorrect answer 3
       question = flashcard[0]
       answers = [(flashcard[1],True), (flashcard[2], False), (flashcard[3], False), (flashcard[4], False)]
-      shuffled_answers = random.shuffle(answers)
+      random.shuffle(answers)
       return render_template("try_it_out.html", user=current_user, question=question, answers=shuffled_answers)
     
   
