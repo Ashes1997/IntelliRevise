@@ -15,21 +15,22 @@ def home():
 @views.route('/try-it-out', methods = ['GET','POST'])
 def try_it_out():
   if request.method == 'POST':
-    prompt = request.form.get('note')
-    if len(prompt) >= 300:
-      flash('Note must be less than 300 characters', category = "error")
-    else: 
-      flashcard = flash_create(prompt)
-      
-        #index 0 is question
-        #index 1 is correct answer
-        #index 2 is incorrect answer 1
-        #index 3 is incorrect answer 2
-        #index 4 is incorrect answer 3
-      question = flashcard[0]
-      answers = [(flashcard[1],True), (flashcard[2], False), (flashcard[3], False), (flashcard[4], False)]
-      random.shuffle(answers)
-      return render_template("try_it_out.html", user=current_user, question=question, answers=answers)
+    if request.form.get('submit_button') == 'create_flashcard':
+      prompt = request.form.get('note')
+      if len(prompt) >= 300:
+        flash('Note must be less than 300 characters', category = "error")
+      else: 
+        flashcard = flash_create(prompt)
+        
+          #index 0 is question
+          #index 1 is correct answer
+          #index 2 is incorrect answer 1
+          #index 3 is incorrect answer 2
+          #index 4 is incorrect answer 3
+        question = flashcard[0]
+        answers = [(flashcard[1],True), (flashcard[2], False), (flashcard[3], False), (flashcard[4], False)]
+        random.shuffle(answers)
+        return render_template("try_it_out.html", user=current_user, question=question, answers=answers)
     
   
   
