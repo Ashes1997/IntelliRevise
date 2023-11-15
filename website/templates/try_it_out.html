@@ -27,6 +27,7 @@
 </form>
 <br />
 {% if question %}
+<form method = "POST">
 <div class="container">
   <div class = "card">
     <div class="card-header">
@@ -44,8 +45,10 @@
         </label>
       </div>
       {% endfor %}
-    
+    </div>
   </div>
+  <button type="submit" class = "btn btn-primary">Submit answer</button>
 </div>
+</form>
 {% endif %}
 {% endblock %}
