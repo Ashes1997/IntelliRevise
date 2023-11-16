@@ -6,11 +6,8 @@
 
   <div class="container">
     <div class="jumbotron">
-      <h1 align="display-4">
-        Try it out
-      </h1>
       <br />
-      <p class="lead">Input a single study note below and see them turned into a flashcard question!</p>
+      <p class="lead">Input a single study note below and see it turned into a flashcard question!</p>
       <hr class="my-4">
       <p>
         The flashcard will be formatted as a question and 4 possible answers, with one of the answers being correct.
@@ -18,7 +15,10 @@
       <p>
         An example of a study note to try is "Abstraction in object-oriented programming is the principle of hiding the internal details of an object from the rest of the code."
       </p>
-    </div>
+        <div class="alert alert-warning disclaimer" role="alert">
+            <strong>Important Note:</strong> The OpenAI API can experience delays, and it may take up to 30 seconds to
+            receive a response. Please be patient while waiting for the results.
+        </div>
   </div>
     <div align="center">
     <textarea name = "note" id = "note" class = "form-control" placeholder = "Enter a study note that is less than 300 characters"></textarea>
