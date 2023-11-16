@@ -1,5 +1,25 @@
 {%extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<h1>Home</h1>
+<main class="container">
+    <div class="mt-5">
+        <h1 class="display-4">Hi, my name is Ash</h1>
+        <p class="lead">This is my website for generating flashcards from study notes.</p>
+        <p>Please head to the "Try it out" page to test out this function.</p>
+
+        <h2 class="mt-4">Key features of this website:</h2>
+        <ul>
+        <li>Built using Flask</li>
+        <li>Utilizes OpenAI's API</li>
+        <li>Can create, store, and authenticate users</li>
+        <li>Utilizes SQL-Alchemy to allow for the management of users, notes, and flashcards</li>
+        </ul>
+
+        <h2 class="mt-4">Future plans:</h2>
+        <ul>
+        <li>Creation of a page to access previously created flashcards</li>
+        <li>Allowing for the generation of multiple-choice "exams" using already generated flashcards</li>
+        </ul>
+    </div>
+</main>
 {% endblock %}
