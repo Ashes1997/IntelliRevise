@@ -8,7 +8,6 @@ import random
 views = Blueprint('views',__name__)
 
 @views.route('/')
-@flask_login.login_required
 def home():
   return render_template("home.html", user=current_user)
 
@@ -38,6 +37,8 @@ def try_it_out():
       correct_answer = request.form.get('correct_answer')
       if answer == correct_answer:
         return redirect(url_for('views.try_it_out_success'))
+      else :
+        flash('Incorrect answer, try again!', category = "error")
     
   
   
