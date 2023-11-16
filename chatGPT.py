@@ -35,7 +35,7 @@ def flash_create(prompt: str):
   # untrimmed_a=flashcard[1]
   #for loops in java > for loops in python
   for index, value in enumerate(flashcard):
-    trimmed = value.replace("Question: ","").replace("Correct Answer: ","").replace("Incorrect Answer 1: ","").replace("Incorrect Answer 2: ","").replace("Incorrect Answer 3: ","")
+    trimmed = value.replace("Question: ","").replace("Correct Answer: ","").replace("Incorrect Answer 1: ","").replace("Incorrect Answer 2: ","").replace("Incorrect Answer 3: ","") #trims indexes, value is value at flashcard[index], then replace index with trimmed value
     flashcard[index]=trimmed
   
   return flashcard

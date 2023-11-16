@@ -37,7 +37,7 @@ def try_it_out():
       answer = request.form.get('answer')
       correct_answer = request.form.get('correct_answer')
       if answer == correct_answer:
-        pass:
+        return redirect(url_for('views.try_it_out_success'))
     
   
   
@@ -46,7 +46,9 @@ def try_it_out():
   return render_template("try_it_out.html", user=current_user)
 
 
-  
 
+@views.route('/try-it-out/success', methods = ['GET','POST'])
+def try_it_out_success():
+  return render_template("try_it_out_success.html", user=current_user)
 
 
