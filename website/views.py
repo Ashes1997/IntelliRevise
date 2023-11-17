@@ -53,7 +53,7 @@ def try_it_out():
 @views.route('/try-it-out/success', methods = ['GET','POST'])
 def try_it_out_success():
   if request.method == 'POST':
-    redirect(url_for('views.home'))
+    return redirect(url_for('views.home'))
   return render_template("try_it_out_success.html", user=current_user)
 
 

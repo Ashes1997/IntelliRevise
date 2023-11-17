@@ -1,14 +1,16 @@
 {%extends "base.html" %}
 {% block title %}Success!{% endblock %}
 {% block content %}
-<form method = "POST">
-  <div class = "container">
-    <h5 align = "center"> Right answer!</h5>
+<form method="POST">
+  <div class="container text-center"> 
+    <h5>Right answer!</h5>
     <br />
-    <img src = "../static/celebration-will-smith.gif" align = "center" alt = "celebration gif">
-    <br />
-    <br />
-    <button type="submit" align = "center" class = "btn btn-primary" name = "submit_button" value = "Return home">Return home</button>
+    <div>
+      <img src="../static/celebration-will-smith.gif" alt="celebration gif">
+      <br />
+      <br />
+      <button type="submit" class="btn btn-primary" name="submit_button" value="return_home">Return home</button>
+    </div>
   </div>
 </form>
 {% endblock %}
