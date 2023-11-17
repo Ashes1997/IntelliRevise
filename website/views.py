@@ -18,6 +18,8 @@ def try_it_out():
       prompt = request.form.get('note')
       if len(prompt) >= 300:
         flash('Note must be less than 300 characters', category = "error")
+      elif len(prompt) <20:
+        flash('Note must 20 or more characters', category = "error")
       else: 
         flashcard = flash_create(prompt)
         
@@ -38,7 +40,7 @@ def try_it_out():
       if answer == correct_answer:
         return redirect(url_for('views.try_it_out_success'))
       else :
-        flash('Incorrect answer, try again!', category = "error")
+        flash('Incorrect answer!', category = "error")
     
   
   
