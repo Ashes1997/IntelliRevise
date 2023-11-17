@@ -1,14 +1,13 @@
 import openai
 import os
 from openai import OpenAI
-from key import openai_api_key
 
 
 #need to reimplent openai API key
 
 
 
-client = OpenAI(api_key=openai_api_key)
+client = OpenAI()
 def flash_create(prompt: str):
   print("Creating flashcard...")
 
